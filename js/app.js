@@ -26,3 +26,9 @@ const h2Element = document.createElement('h2');
 h2Element.textContent = 'Comments section';
 
 bodyElement.appendChild(h2Element);
+
+const commentElements = document.querySelectorAll("#comments li");
+
+commentElements.forEach((commentElement) => {
+    commentElement.style.fontSize = "30px";
+});
