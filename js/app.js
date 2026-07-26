@@ -32,3 +32,40 @@ const commentElements = document.querySelectorAll("#comments li");
 commentElements.forEach((commentElement) => {
     commentElement.style.fontSize = "30px";
 });
+
+const buttonElement = document.querySelector('button');
+if (buttonElement.hasAttribute('disabled') === true) {
+    buttonElement.removeAttribute('disabled');
+}
+
+buttonElement.setAttribute("id", "submit");
+
+console.log(buttonElement);
+
+console.log(buttonElement.getAttribute("id"));
+
+buttonElement.classList.add("btn");
+
+console.log(buttonElement.className);
+
+buttonElement.classList.remove("btn");
+
+console.log(buttonElement.className);
+
+buttonElement.classList.add("action-button");
+
+console.log(buttonElement.className);
+
+console.log(buttonElement.classList.contains("action-button")); // true
+console.log(buttonElement.classList.contains("btn")); // false
+
+buttonElement.classList.replace(
+    "action-button",
+    "primary-button"
+);
+
+console.log(buttonElement.className);
+
+buttonElement.classList.toggle("dark");
+
+console.log(buttonElement.className);
